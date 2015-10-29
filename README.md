@@ -14,6 +14,6 @@ javascript: (function() {var a = document.createElement("script");a.src = "https
 
 - Click the bookmarklet (or copy and paste the code as a Chrome snippet)
  - `body` is used as the source, but if $0 (e.g. a currently selected element) is available, that is used instead
-- Type your dependency (e.g. `$rootScope`, `$rcAlerts`, etc.)
+- Type your dependency (e.g. `$rootScope`, `$state`, etc.)
  - Note that `$scope` is not available
- - Additionally, the dependency can be aliased to a different variable like so: `$rcAlerts, alerts`--`alerts` is now a global
+ - Additionally, the dependency can be aliased to a different variable like so: `$state state`--`state` is now a global
