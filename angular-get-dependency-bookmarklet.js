@@ -4,7 +4,7 @@
       console.warn('No AngularJS version detected.');
       return;
     } else {
-      var dep = window.prompt('What would you like to get? (e.g. $rootScope, $rcAlerts, etc.)');
+      var dep = window.prompt('What would you like to get? (e.g. $rootScope, $state, etc.)');
 
       if ( !!dep ) {
         try {
