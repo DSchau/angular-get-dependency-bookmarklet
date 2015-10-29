@@ -7,7 +7,7 @@ A bookmarkable function to get (and assign as a global) an Angular dependency.
 Copy and paste the following into a new bookmark, and save it to your bookmarks bar.
 
 ```javascript
-javascript: (function() {var a = document.createElement("script");a.src = "https://rawgithub.com/kentcdodds/ng-stats/master/dist/ng-stats.js";a.onload=function(){window.getDependency()};document.head.appendChild(a)})();
+javascript: (function() {var a = document.createElement("script");a.src = "http://git-dev.uit.tla.uprr.com:9080/dschau/angular-get-dependency-bookmarklet/raw/master/angular-get-dependency-bookmarklet.js";a.onload=function(){window.getDependency()};document.head.appendChild(a)})();
 ```
 
 ## Usage
