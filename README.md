@@ -16,6 +16,9 @@ javascript: (function() {var a = document.createElement("script");a.src = "https
  - `body` is used as the source, but if $0 (e.g. a currently selected element) is available, that is used instead
 - Type your dependency (e.g. `$rootScope`, `$state`, etc.)
  - Note that `$scope` is not available
+- Note that the dependency is now available as a global
+- ...
+- Profit
 
 ## Advanced Usage
 
