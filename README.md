@@ -16,4 +16,24 @@ javascript: (function() {var a = document.createElement("script");a.src = "https
  - `body` is used as the source, but if $0 (e.g. a currently selected element) is available, that is used instead
 - Type your dependency (e.g. `$rootScope`, `$state`, etc.)
  - Note that `$scope` is not available
- - Additionally, the dependency can be aliased to a different variable like so: `$state state`--`state` is now a global
+
+## Advanced Usage
+
+### Aliasing the global
+
+`$rootScope rs`
+
+The global `rs` will point to `$rootScope`, e.g. `rs.$on(...)`
+
+### Calling a function in the prompt
+
+```javascript
+var timeoutLength = 5000;
+var callback = function() {
+  console.log('I will be called every ' + timeoutLength / 1000 + ' seconds');
+};
+```
+
+Call the bookmarklet with `$interval(callback, timeoutLength)` to call the callback every 5 seconds.
+
+Alternately, consider using `$rootScope.$apply(optionalFn)` to sync changes made locally (in scope) to the view!
