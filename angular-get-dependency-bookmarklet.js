@@ -1,6 +1,6 @@
 (function() {
   window.getDependency = getDependency;
-  function getDependency(strDep, el) {
+  function getDependency(strDep, el, scope) {
     el = el || window.document.body;
     if (!window.angular) {
       console.warn('No AngularJS version detected.');
@@ -10,7 +10,7 @@
 
     if (!!dep) {
       try {
-        var angularDep = getAngularDependency(dep, window.$0 || el);
+        var angularDep = getAngularDependency(dep, window.$0 || el, scope);
         if (window[angularDep.alias]) {
           console.warn('Replacing an existing global. Uh-oh!');
         }
