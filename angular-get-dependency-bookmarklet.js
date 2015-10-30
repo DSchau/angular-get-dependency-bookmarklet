@@ -43,7 +43,6 @@
         });
         fn = dep;
         if ( !!chain.length ) {
-          chain[chain.length-1] = chain[chain.length-1].replace(fnCallExpr, '');
           while ( chain.length ) {
             fn = fn[chain.shift()];
           }
