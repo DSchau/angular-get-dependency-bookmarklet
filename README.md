@@ -24,6 +24,8 @@ javascript: (function() {var a = document.createElement("script");a.src = "https
 
 ### Aliasing the global
 
+#### `dependency [space] alias`, e.g.
+
 `$rootScope rs`
 
 The global `rs` will point to `$rootScope`, e.g. `rs.$on(...)`
