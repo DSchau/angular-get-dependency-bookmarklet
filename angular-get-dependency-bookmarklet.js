@@ -8,15 +8,15 @@
     }
     var dep = strDep || window.prompt('What would you like to get? (e.g. $rootScope, $state, etc.)');
 
-    if (!!dep) {
+    if ( !!dep ) {
       try {
-        var angularDep = getAngularDependency(dep, window.$0 || el, scope);
-        if (window[angularDep.alias]) {
+        var depObj = getAngularDependency(dep, window.$0 || el, scope);
+        if (window[depObj.alias]) {
           console.warn('Replacing an existing global. Uh-oh!');
         }
-        window[angularDep.alias] = angularDep.dep;
-        console.info(angularDep.alias + ' is now available in the Developer Console. Enjoy!');
-        return window[angularDep.alias];
+        var angularDep = window[depObj.alias] = depObj.dep;
+        console.info(depObj.alias + ' is now available in the Developer Console. Enjoy!');
+        return angularDep;
       } catch (exception) {
         throw exception;
       }
